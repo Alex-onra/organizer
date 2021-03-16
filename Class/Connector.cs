@@ -5,9 +5,8 @@ namespace OrganizerB
 {
     class Connector
     {
-        private static string connectionString = $"Provider=Microsoft.ACE.OLEDB.12.0; " +
-                                                  $"Data Source=DataBase.accdb;" +
-                                                        $"Persist Security Info=False;";
+        private static string connectionString = $"Provider=Microsoft.Jet.OLEDB.4.0; " +
+                                                  $"Data Source= ./Resources/DataBase.mdb;";
         private OleDbConnection connection = new OleDbConnection(connectionString);
 
         public OleDbConnection getConnection()

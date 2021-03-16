@@ -31,18 +31,18 @@ namespace OrganizerB
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AddPlayerButton = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.PenaltysText = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TransfersText = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.GoalsText = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SurnameText = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -81,26 +81,27 @@ namespace OrganizerB
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.button1);
+            this.panel6.Controls.Add(this.AddPlayerButton);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(3, 223);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(244, 41);
             this.panel6.TabIndex = 5;
             // 
-            // button1
+            // AddPlayerButton
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(244, 34);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AddPlayerButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AddPlayerButton.Location = new System.Drawing.Point(0, 0);
+            this.AddPlayerButton.Name = "AddPlayerButton";
+            this.AddPlayerButton.Size = new System.Drawing.Size(244, 34);
+            this.AddPlayerButton.TabIndex = 0;
+            this.AddPlayerButton.Text = "Добавить";
+            this.AddPlayerButton.UseVisualStyleBackColor = true;
+            this.AddPlayerButton.Click += new System.EventHandler(this.AddPlayerButton_Click);
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.textBox4);
+            this.panel5.Controls.Add(this.PenaltysText);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(3, 179);
@@ -108,13 +109,13 @@ namespace OrganizerB
             this.panel5.Size = new System.Drawing.Size(244, 38);
             this.panel5.TabIndex = 4;
             // 
-            // textBox4
+            // PenaltysText
             // 
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox4.Location = new System.Drawing.Point(0, 13);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(244, 20);
-            this.textBox4.TabIndex = 3;
+            this.PenaltysText.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PenaltysText.Location = new System.Drawing.Point(0, 13);
+            this.PenaltysText.Name = "PenaltysText";
+            this.PenaltysText.Size = new System.Drawing.Size(244, 20);
+            this.PenaltysText.TabIndex = 3;
             // 
             // label5
             // 
@@ -128,7 +129,7 @@ namespace OrganizerB
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.textBox3);
+            this.panel4.Controls.Add(this.TransfersText);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 135);
@@ -136,13 +137,13 @@ namespace OrganizerB
             this.panel4.Size = new System.Drawing.Size(244, 38);
             this.panel4.TabIndex = 3;
             // 
-            // textBox3
+            // TransfersText
             // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox3.Location = new System.Drawing.Point(0, 13);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(244, 20);
-            this.textBox3.TabIndex = 3;
+            this.TransfersText.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TransfersText.Location = new System.Drawing.Point(0, 13);
+            this.TransfersText.Name = "TransfersText";
+            this.TransfersText.Size = new System.Drawing.Size(244, 20);
+            this.TransfersText.TabIndex = 3;
             // 
             // label4
             // 
@@ -156,7 +157,7 @@ namespace OrganizerB
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.GoalsText);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 91);
@@ -164,13 +165,13 @@ namespace OrganizerB
             this.panel3.Size = new System.Drawing.Size(244, 38);
             this.panel3.TabIndex = 2;
             // 
-            // textBox2
+            // GoalsText
             // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox2.Location = new System.Drawing.Point(0, 13);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(244, 20);
-            this.textBox2.TabIndex = 3;
+            this.GoalsText.Dock = System.Windows.Forms.DockStyle.Top;
+            this.GoalsText.Location = new System.Drawing.Point(0, 13);
+            this.GoalsText.Name = "GoalsText";
+            this.GoalsText.Size = new System.Drawing.Size(244, 20);
+            this.GoalsText.TabIndex = 3;
             // 
             // label3
             // 
@@ -184,7 +185,7 @@ namespace OrganizerB
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.SurnameText);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 47);
@@ -192,13 +193,13 @@ namespace OrganizerB
             this.panel2.Size = new System.Drawing.Size(244, 38);
             this.panel2.TabIndex = 1;
             // 
-            // textBox1
+            // SurnameText
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox1.Location = new System.Drawing.Point(0, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(244, 20);
-            this.textBox1.TabIndex = 1;
+            this.SurnameText.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SurnameText.Location = new System.Drawing.Point(0, 13);
+            this.SurnameText.Name = "SurnameText";
+            this.SurnameText.Size = new System.Drawing.Size(244, 20);
+            this.SurnameText.TabIndex = 1;
             // 
             // label2
             // 
@@ -274,18 +275,18 @@ namespace OrganizerB
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AddPlayerButton;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox PenaltysText;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TransfersText;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox GoalsText;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox SurnameText;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;

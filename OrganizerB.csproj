@@ -53,11 +53,15 @@
     <Compile Include="AboutComands.Designer.cs">
       <DependentUpon>AboutComands.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class\AddPlayerClass.cs" />
     <Compile Include="Class\Connector.cs" />
+    <Compile Include="Class\DeletePlayer.cs" />
     <Compile Include="Class\GetCommandsData.cs" />
+    <Compile Include="Class\GetGoalsClass.cs" />
+    <Compile Include="Class\GetPenaltysClass.cs" />
     <Compile Include="Class\StatisticEventArgs.cs" />
     <Compile Include="Class\StatisticGetter.cs" />
-    <Compile Include="Interface\IObserver.cs" />
+    <Compile Include="Interface\IAdd.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,13 +87,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -102,6 +101,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataBase.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataBase.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

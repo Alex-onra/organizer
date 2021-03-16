@@ -117,7 +117,6 @@ namespace OrganizerB
             this.splitContainer1.Panel1.Controls.Add(this.Command2L);
             this.splitContainer1.Panel1.Controls.Add(this.Command1Goal);
             this.splitContainer1.Panel1.Controls.Add(this.Command1L);
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
@@ -385,6 +384,8 @@ namespace OrganizerB
             this.Controls.Add(this.tabControl1);
             this.Name = "AboutComands";
             this.Text = "О командах";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AboutComands_FormClosing);
+            this.Shown += new System.EventHandler(this.AboutComands_Shown);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
