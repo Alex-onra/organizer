@@ -121,19 +121,5 @@ namespace OrganizerB
             connector.disposeConnection();
             return selections;
         }
-
-        //public void Update(IDataModel model)
-        //{
-        //    IntercitySelection SelModel = (IntercitySelection)model;
-        //    string cost = SelModel.callPrice.ToString().Replace(".", ",");
-        //    string updQue = $"UPDATE {tableName} SET Cost = @price" +
-        //        $" WHERE SURNAME LIKE '{SelModel.surname}'";
-        //    OleDbCommand updCommand = new OleDbCommand(updQue, connection);
-        //    updCommand.Parameters.Add(new OleDbParameter("@price", OleDbType.Double));
-        //    updCommand.Parameters["@price"].Value = cost;
-        //    connection.Open();
-        //    updCommand.ExecuteNonQuery();
-        //    connection.Close();
-        //}
     }
 }

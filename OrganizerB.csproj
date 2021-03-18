@@ -47,46 +47,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutComands.cs">
+    <Compile Include="Forms\AboutComands.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutComands.Designer.cs">
+    <Compile Include="Forms\AboutComands.Designer.cs">
       <DependentUpon>AboutComands.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class\AddPlayerClass.cs" />
+    <Compile Include="Class\Hockey\AddPlayerClass.cs" />
     <Compile Include="Class\Connector.cs" />
-    <Compile Include="Class\DeletePlayer.cs" />
-    <Compile Include="Class\GetBestPlayers.cs" />
-    <Compile Include="Class\GetCommandsData.cs" />
-    <Compile Include="Class\GetGoalsClass.cs" />
-    <Compile Include="Class\GetPenaltysClass.cs" />
+    <Compile Include="Class\Hockey\DeletePlayer.cs" />
+    <Compile Include="Class\Hockey\GetBestPlayers.cs" />
+    <Compile Include="Class\Hockey\GetCommandsData.cs" />
+    <Compile Include="Class\Hockey\GetGoalsClass.cs" />
+    <Compile Include="Class\Hockey\GetPenaltysClass.cs" />
     <Compile Include="Class\Models\BestPlayerRowModel.cs" />
     <Compile Include="Class\Models\HockeyRowModel.cs" />
-    <Compile Include="Class\Selection.cs" />
-    <Compile Include="Class\StatisticEventArgs.cs" />
-    <Compile Include="Class\StatisticGetter.cs" />
-    <Compile Include="Class\UpdateCommands.cs" />
-    <Compile Include="Main.cs">
+    <Compile Include="Class\Hockey\Selection.cs" />
+    <Compile Include="Class\Models\StatisticEventArgs.cs" />
+    <Compile Include="Class\Hockey\StatisticGetter.cs" />
+    <Compile Include="Class\Hockey\UpdateCommands.cs" />
+    <Compile Include="Forms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
+    <Compile Include="Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddPlayer.cs">
+    <Compile Include="Forms\AddPlayer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddPlayer.Designer.cs">
+    <Compile Include="Forms\AddPlayer.Designer.cs">
       <DependentUpon>AddPlayer.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AboutComands.resx">
+    <EmbeddedResource Include="Forms\AboutComands.resx">
       <DependentUpon>AboutComands.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
+    <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddPlayer.resx">
+    <EmbeddedResource Include="Forms\AddPlayer.resx">
       <DependentUpon>AddPlayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -115,6 +115,9 @@
     <None Include="Resources\DataBase.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Class\organizer\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
