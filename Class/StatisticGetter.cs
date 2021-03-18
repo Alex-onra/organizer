@@ -21,8 +21,11 @@ namespace OrganizerB
                  e.penaltys.Clear();
                     e.penaltys = penaltys.GetPenaltys();
 
-                     e.fullInfo = data.getList();
-
+            GetBestPlayers bestPlayers = new GetBestPlayers();
+                e.bestPlayers.Clear();
+                    e.bestPlayers = bestPlayers.Get();
+                
+                e.fullInfo = data.getList();
             if (OnUpdate != null)
                 OnUpdate(this, e);
 

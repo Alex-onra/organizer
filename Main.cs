@@ -27,13 +27,13 @@ namespace OrganizerB
         public void UpdateDataView(object sender, StatisticEventArgs e)
         {
             CommandsView.Rows.Clear();
-                foreach(object[] row in e.fullInfo)
-                            CommandsView.Rows.Add(row[0],
-                                                    row[1],
-                                                        row[2],
-                                                            row[3],
-                                                                row[4],
-                                                                    row[5]);
+                foreach(HockeyRowModel row in e.fullInfo)
+                            CommandsView.Rows.Add(row.id,
+                                                    row.surname,
+                                                        row.command,
+                                                            row.count,
+                                                                row.transfers,
+                                                                    row.penaltys);
          
         }
 

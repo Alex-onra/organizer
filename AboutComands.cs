@@ -16,7 +16,6 @@ namespace OrganizerB
 
         private void update(object sender, StatisticEventArgs e)
         {
-            Console.WriteLine($"OK {sender.GetType()}");
             int indexOf = 1;
             int maxGoal = 0;
             foreach (int goal in e.goals)
@@ -64,6 +63,12 @@ namespace OrganizerB
             PenaltyChart.Series[2].Points.Add(int.Parse(Penalty3.Text));
             PenaltyChart.Series[3].Points.Add(int.Parse(Penalty4.Text));
             PenaltyChart.Series[4].Points.Add(int.Parse(Penalty5.Text));
+
+            BestView.Rows.Clear();
+            foreach (BestPlayerRowModel player in e.bestPlayers)
+            {
+                BestView.Rows.Add(player.surname, player.score);
+            }
         }
 
         public void Register()

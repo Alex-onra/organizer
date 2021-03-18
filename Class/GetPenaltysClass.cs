@@ -11,22 +11,22 @@ namespace OrganizerB
         
         int[] commandsPenaltys = { 0, 0, 0, 0, 0 };
 
-        foreach (object[] item in data.getList())
+        foreach (HockeyRowModel item in data.getList())
         {
-            if (item[2].Equals("Авангард"))
-                commandsPenaltys[0] += Convert.ToInt32(item[5]);
+            if (item.command.Equals("Авангард"))
+                commandsPenaltys[0] += Convert.ToInt32(item.penaltys);
 
-            else if (item[2].Equals("Автомобилист"))
-                commandsPenaltys[1] += Convert.ToInt32(item[5]);
+            else if (item.command.Equals("Автомобилист"))
+                commandsPenaltys[1] += Convert.ToInt32(item.penaltys);
 
-            else if (item[2].Equals("Амур"))
-                commandsPenaltys[2] += Convert.ToInt32(item[5]);
+            else if (item.command.Equals("Амур"))
+                commandsPenaltys[2] += Convert.ToInt32(item.penaltys);
 
-            else if (item[2].Equals("Барыс"))
-                commandsPenaltys[3] += Convert.ToInt32(item[5]);
+            else if (item.command.Equals("Барыс"))
+                commandsPenaltys[3] += Convert.ToInt32(item.penaltys);
 
-            else if (item[2].Equals("Йокерит"))
-                commandsPenaltys[4] += Convert.ToInt32(item[5]);
+            else if (item.command.Equals("Йокерит"))
+                commandsPenaltys[4] += Convert.ToInt32(item.penaltys);
             else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -38,6 +38,6 @@ namespace OrganizerB
                 penaltys.AddRange(commandsPenaltys);
                     return penaltys; 
       
+        }
     }
-}
 }

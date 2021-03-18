@@ -56,13 +56,15 @@
     <Compile Include="Class\AddPlayerClass.cs" />
     <Compile Include="Class\Connector.cs" />
     <Compile Include="Class\DeletePlayer.cs" />
+    <Compile Include="Class\GetBestPlayers.cs" />
     <Compile Include="Class\GetCommandsData.cs" />
     <Compile Include="Class\GetGoalsClass.cs" />
     <Compile Include="Class\GetPenaltysClass.cs" />
+    <Compile Include="Class\Models\BestPlayerRowModel.cs" />
+    <Compile Include="Class\Models\HockeyRowModel.cs" />
     <Compile Include="Class\StatisticEventArgs.cs" />
     <Compile Include="Class\StatisticGetter.cs" />
     <Compile Include="Class\UpdateCommands.cs" />
-    <Compile Include="Interface\IAdd.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>

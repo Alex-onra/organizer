@@ -29,12 +29,12 @@ namespace OrganizerB
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -62,6 +62,14 @@ namespace OrganizerB
             this.Penalty1 = new System.Windows.Forms.Label();
             this.Command1S = new System.Windows.Forms.Label();
             this.PenaltyChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.SortButton = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.BestView = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Row2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -75,17 +83,25 @@ namespace OrganizerB
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PenaltyChart)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BestView)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(502, 408);
+            this.tabControl1.Size = new System.Drawing.Size(363, 408);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -217,17 +233,17 @@ namespace OrganizerB
             // 
             // GoalsChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.GoalsChart.ChartAreas.Add(chartArea1);
+            chartArea3.Name = "ChartArea1";
+            this.GoalsChart.ChartAreas.Add(chartArea3);
             this.GoalsChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.GoalsChart.Legends.Add(legend1);
+            legend3.Name = "Legend1";
+            this.GoalsChart.Legends.Add(legend3);
             this.GoalsChart.Location = new System.Drawing.Point(0, 0);
             this.GoalsChart.Name = "GoalsChart";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.GoalsChart.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.GoalsChart.Series.Add(series3);
             this.GoalsChart.Size = new System.Drawing.Size(322, 376);
             this.GoalsChart.TabIndex = 1;
             this.GoalsChart.Text = "chart2";
@@ -361,26 +377,118 @@ namespace OrganizerB
             // 
             // PenaltyChart
             // 
-            chartArea2.Name = "ChartArea1";
-            this.PenaltyChart.ChartAreas.Add(chartArea2);
+            chartArea4.Name = "ChartArea1";
+            this.PenaltyChart.ChartAreas.Add(chartArea4);
             this.PenaltyChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.PenaltyChart.Legends.Add(legend2);
+            legend4.Name = "Legend1";
+            this.PenaltyChart.Legends.Add(legend4);
             this.PenaltyChart.Location = new System.Drawing.Point(0, 0);
             this.PenaltyChart.Name = "PenaltyChart";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.PenaltyChart.Series.Add(series2);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.PenaltyChart.Series.Add(series4);
             this.PenaltyChart.Size = new System.Drawing.Size(322, 376);
             this.PenaltyChart.TabIndex = 0;
             this.PenaltyChart.Text = "chart1";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.tableLayoutPanel1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(355, 382);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Лучшие игроки";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.splitContainer3, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.BestView, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.446808F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.55319F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(349, 376);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // splitContainer3
+            // 
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer3.Name = "splitContainer3";
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.SortButton);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.comboBox1);
+            this.splitContainer3.Size = new System.Drawing.Size(343, 21);
+            this.splitContainer3.SplitterDistance = 114;
+            this.splitContainer3.TabIndex = 0;
+            // 
+            // SortButton
+            // 
+            this.SortButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SortButton.Location = new System.Drawing.Point(0, 0);
+            this.SortButton.Name = "SortButton";
+            this.SortButton.Size = new System.Drawing.Size(114, 21);
+            this.SortButton.TabIndex = 0;
+            this.SortButton.Text = "Сортировать по";
+            this.SortButton.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Имя игрока",
+            "Количество очков"});
+            this.comboBox1.Location = new System.Drawing.Point(0, 0);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(225, 21);
+            this.comboBox1.TabIndex = 0;
+            this.comboBox1.Text = "Имя игрока";
+            // 
+            // BestView
+            // 
+            this.BestView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BestView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Row2});
+            this.BestView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BestView.Location = new System.Drawing.Point(3, 30);
+            this.BestView.Name = "BestView";
+            this.BestView.Size = new System.Drawing.Size(343, 343);
+            this.BestView.TabIndex = 1;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Фамилия";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 200;
+            // 
+            // Row2
+            // 
+            this.Row2.HeaderText = "Количество очков";
+            this.Row2.Name = "Row2";
+            this.Row2.ReadOnly = true;
             // 
             // AboutComands
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 408);
+            this.ClientSize = new System.Drawing.Size(363, 408);
             this.Controls.Add(this.tabControl1);
             this.Name = "AboutComands";
             this.Text = "О командах";
@@ -401,6 +509,13 @@ namespace OrganizerB
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PenaltyChart)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BestView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -434,5 +549,13 @@ namespace OrganizerB
         private System.Windows.Forms.Label Command1S;
         private System.Windows.Forms.DataVisualization.Charting.Chart GoalsChart;
         private System.Windows.Forms.DataVisualization.Charting.Chart PenaltyChart;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.SplitContainer splitContainer3;
+        private System.Windows.Forms.Button SortButton;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView BestView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Row2;
     }
 }

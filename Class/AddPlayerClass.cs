@@ -3,7 +3,7 @@ using System;
 
 namespace OrganizerB
 {
-    class AddPlayerClass:IAdd
+    class AddPlayerClass
     {
         Connector connector;
 
@@ -12,15 +12,15 @@ namespace OrganizerB
             connector = new Connector();
         }
 
-        public void Add(object[] row)
+        public void Add(HockeyRowModel row)
         {
             string addCmd = $"INSERT INTO Hockey([Surname],[Command],[Count],[Transfers],[Penaltys])" +
-                $" VALUES ('{(string)row[0]}'" +
-                $", '{(string)row[1]}' " +
-                $", {(int)row[2]} " +
-                $", {(int)row[3]} " +
-                $", {(int)row[4]})";
-            //string addCmd = "INSERT INTO Customers(city, cname, cnum) VALUES(‘London’, ‘Hoffman’, 2001);";
+                $" VALUES ('{row.surname}'" +
+                $", '{row.command}' " +
+                $", {row.count} " +
+                $", {row.transfers} " +
+                $", {row.penaltys})";
+
             OleDbCommand addPlayerCommand = new OleDbCommand(addCmd, connector.getConnection());
 
             if (addPlayerCommand.ExecuteNonQuery() != 1)

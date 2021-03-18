@@ -20,14 +20,14 @@ namespace OrganizerB
                 TransfersText.TextLength != 0 &&
                 PenaltysText.TextLength != 0)
             {
-                try
-                {
-                    string surname = SurnameText.Text;
-                    string command = AddCommandNames.Text;
-                    int count = Convert.ToInt32(GoalsText.Text);
-                    int transfers = Convert.ToInt32(TransfersText.Text);
-                    int penaltys = Convert.ToInt32(PenaltysText.Text);
-                    object[] row = { surname, command, count, transfers, penaltys };
+                //try
+                //{
+                    HockeyRowModel row = new HockeyRowModel();
+                    row.surname = SurnameText.Text;
+                    row.command = AddCommandNames.Text;
+                    row.count = Convert.ToInt32(GoalsText.Text);
+                    row.transfers = Convert.ToInt32(TransfersText.Text);
+                    row.penaltys = Convert.ToInt32(PenaltysText.Text);
 
                     addPlayer.Add(row);
                     AboutComands aboutComands = (AboutComands)Application.OpenForms["AboutComands"];
@@ -35,11 +35,11 @@ namespace OrganizerB
                         aboutComands.Register();
 
                     statistic.Get();
-                }
-                catch
-                {
-                    MessageBox.Show("Проверьте правильность ввода данных и повторите попытку", "Ошибка!");
-                }
+                //}
+                //catch
+                //{
+                //    MessageBox.Show("Проверьте правильность ввода данных и повторите попытку", "Ошибка!");
+                //}
 
             }
 

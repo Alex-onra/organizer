@@ -12,22 +12,22 @@ namespace OrganizerB
 
             int[] commandsGoals = { 0, 0, 0, 0, 0 };
 
-            foreach (object[] item in data.getList())
+            foreach (HockeyRowModel item in data.getList())
             {
-                if (item[2].Equals("Авангард"))
-                    commandsGoals[0] += Convert.ToInt32(item[3]);
+                if (item.command.Equals("Авангард"))
+                    commandsGoals[0] += Convert.ToInt32(item.count);
 
-                else if (item[2].Equals("Автомобилист"))
-                    commandsGoals[1] += Convert.ToInt32(item[3]);
+                else if (item.command.Equals("Автомобилист"))
+                    commandsGoals[1] += Convert.ToInt32(item.count);
 
-                else if (item[2].Equals("Амур"))
-                    commandsGoals[2] += Convert.ToInt32(item[3]);
+                else if (item.command.Equals("Амур"))
+                    commandsGoals[2] += Convert.ToInt32(item.count);
 
-                else if (item[2].Equals("Барыс"))
-                    commandsGoals[3] += Convert.ToInt32(item[3]);
+                else if (item.command.Equals("Барыс"))
+                    commandsGoals[3] += Convert.ToInt32(item.count);
 
-                else if (item[2].Equals("Йокерит"))
-                    commandsGoals[4] += Convert.ToInt32(item[3]);
+                else if (item.command.Equals("Йокерит"))
+                    commandsGoals[4] += Convert.ToInt32(item.count);
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Red;

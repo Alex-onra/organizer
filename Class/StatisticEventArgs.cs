@@ -7,6 +7,7 @@ namespace OrganizerB
     {
         public List<int> goals = new List<int>();
         public List<int> penaltys = new List<int>();
-        public List<object> fullInfo = new List<object>();
+        public List<BestPlayerRowModel> bestPlayers = new List<BestPlayerRowModel>();
+        public List<HockeyRowModel> fullInfo = new List<HockeyRowModel>();
     }
 }
