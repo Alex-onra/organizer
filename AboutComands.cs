@@ -85,8 +85,15 @@ namespace OrganizerB
 
         private void AboutComands_FormClosing(object sender, FormClosingEventArgs e)
         {
-            AddPlayer pf = (AddPlayer)Application.OpenForms["AddPlayer"];
-            pf.statistic.OnUpdate -= update;
+            try
+            {
+                AddPlayer pf = (AddPlayer)Application.OpenForms["AddPlayer"];
+                pf.statistic.OnUpdate -= update;
+            }
+            catch 
+            {
+                Console.WriteLine("Ошибка отписки! Юзер дропнул форму добавления");
+            }
         }
     }
 }

@@ -61,6 +61,7 @@
     <Compile Include="Class\GetPenaltysClass.cs" />
     <Compile Include="Class\StatisticEventArgs.cs" />
     <Compile Include="Class\StatisticGetter.cs" />
+    <Compile Include="Class\UpdateCommands.cs" />
     <Compile Include="Interface\IAdd.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>

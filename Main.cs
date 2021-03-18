@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace OrganizerB
 {
@@ -38,7 +39,23 @@ namespace OrganizerB
 
         private void button2_Click(object sender, EventArgs e)
         {
+            var rowEnd = CommandsView.Rows.Count;
+            var colEnd = CommandsView.Rows[0].Cells.Count;
+            List<object> itemTable = new List<object>();
 
+            for (int rowIndex = 0; rowIndex < rowEnd - 1; rowIndex++)
+            {
+                object[] item = new object[6];
+                for (int cellIndex = 0; cellIndex < colEnd; cellIndex++)
+                {
+                    item[cellIndex] = CommandsView.Rows[rowIndex].Cells[cellIndex].Value;
+                }
+                itemTable.Add(item);
+            }
+
+            UpdateCommands updateCommands = new UpdateCommands();
+            updateCommands.Update(itemTable);
+            GetUpdate();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -55,13 +72,18 @@ namespace OrganizerB
             
         }
 
-        private void Main_Shown(object sender, EventArgs e)
+        private void GetUpdate()
         {
             GetCommandsData data = new GetCommandsData();
-                StatisticEventArgs args = new StatisticEventArgs();
-
+            StatisticEventArgs args = new StatisticEventArgs();
+            CommandsView.Rows.Clear();
             args.fullInfo = data.getList();
-                UpdateDataView(this, args);
+            UpdateDataView(this, args);
+        }
+
+        private void Main_Shown(object sender, EventArgs e)
+        {
+            GetUpdate();
         }
     }
 }
