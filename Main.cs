@@ -72,7 +72,7 @@ namespace OrganizerB
             
         }
 
-        private void GetUpdate()
+        public void GetUpdate()
         {
             GetCommandsData data = new GetCommandsData();
             StatisticEventArgs args = new StatisticEventArgs();

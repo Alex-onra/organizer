@@ -53,31 +53,31 @@ namespace OrganizerB
                  team4.Sort();
                    team5.Sort();
 
-            if (team1.Count > 4)
+            if (team1.Count >= 4)
                 for (int p = team1.Count - 1; p > team1.Count - 4; p--)
                     bestPlayers.Add(team1[p]);
             else
                 bestPlayers.AddRange(team1);
 
-            if (team2.Count > 4)
+            if (team2.Count >= 4)
                 for (int p = team2.Count - 1; p > team1.Count - 4; p--)
                     bestPlayers.Add(team2[p]);
             else
                 bestPlayers.AddRange(team2);
 
-            if (team3.Count > 4)
+            if (team3.Count >= 4)
                 for (int p = team3.Count - 1; p > team1.Count - 4; p--)
                     bestPlayers.Add(team3[p]);
             else
                 bestPlayers.AddRange(team3);
 
-            if (team4.Count > 4)
+            if (team4.Count >= 4)
                 for (int p = team4.Count - 1; p > team1.Count - 4; p--)
                     bestPlayers.Add(team4[p]);
             else
                 bestPlayers.AddRange(team4);
 
-            if (team5.Count > 4)
+            if (team5.Count >= 4)
                 for (int p = team5.Count - 1; p > team1.Count - 4; p--)
                     bestPlayers.Add(team5[p]);
             else
@@ -85,13 +85,21 @@ namespace OrganizerB
 
             bestPlayers.Sort();
 
-            if (bestPlayers.Count >= 7)
-                for (int bestPlayer = bestPlayers.Count - 1; bestPlayer >= bestPlayer - 7; bestPlayer--)
+            if (bestPlayers.Count >= 8)
+                for (int bestPlayer = bestPlayers.Count - 1; bestPlayer >= bestPlayer - 6; bestPlayer--)
                     bestOfTheBest.Add(bestPlayers[bestPlayer]);
-            else return bestPlayers;
-            
+            else
+                return bestPlayers;
+           
+
             return bestOfTheBest; 
         }
-       
+
+       public void putToDB()
+        {
+            
+            Selection selection = new Selection();
+            selection.CreateNewTable(Get());
+        }
     }
 }

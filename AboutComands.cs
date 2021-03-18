@@ -1,18 +1,14 @@
 ﻿using System.Windows.Forms;
 using System;
 using System.Threading;
+using System.Collections.Generic;
 
 namespace OrganizerB
 {
     public partial class AboutComands : Form
     {
-        public AboutComands()
-        {
-
-            InitializeComponent();
-
-
-        }
+        public AboutComands()=>
+                InitializeComponent();
 
         private void update(object sender, StatisticEventArgs e)
         {
@@ -93,12 +89,87 @@ namespace OrganizerB
             try
             {
                 AddPlayer pf = (AddPlayer)Application.OpenForms["AddPlayer"];
-                pf.statistic.OnUpdate -= update;
+                if(!pf.IsDisposed)
+                    pf.statistic.OnUpdate -= update;
             }
             catch 
             {
                 Console.WriteLine("Ошибка отписки! Юзер дропнул форму добавления");
             }
+        }
+
+        private void SaveToDbButton_Click(object sender, EventArgs e)
+        {
+            GetBestPlayers bestPlayers = new GetBestPlayers();
+            bestPlayers.putToDB();
+        }
+
+        private void SortButton_Click(object sender, EventArgs e)
+        {
+            
+            Selection selection = new Selection();
+            List<BestPlayerRowModel> grouped;
+            switch (SortColSelector.SelectedIndex)
+            {
+                case 0:
+                     grouped = selection.GroupBy(GroupRows.Surname);
+                    break;
+                case 1:
+                    grouped = selection.GroupBy(GroupRows.Score);
+                    break;
+                default:
+                    grouped = selection.GroupBy(GroupRows.Surname);
+                    break;
+            }
+
+            BestView.Rows.Clear();
+
+            foreach (BestPlayerRowModel row in grouped)
+                BestView.Rows.Add(row.surname, row.score);
+            
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            DeletePlayer delPlayers = new DeletePlayer();
+            try
+            {
+                delPlayers.DeleteByPenaltys(Convert.ToInt32(DeletionPenalty.Text));
+                updateViews();
+            }
+            catch
+            {
+                MessageBox.Show("Необходимо вводить число", "Ошибка ввода");
+            }
+        }
+
+        void updateViews()
+        {
+            Main mainForm = (Main)Application.OpenForms["Main"];
+            StatisticEventArgs Args = new StatisticEventArgs();
+            GetGoalsClass getGoals = new GetGoalsClass();
+            GetPenaltysClass getPenaltys = new GetPenaltysClass();
+            mainForm.GetUpdate();
+            Args.goals = getGoals.GetGoals();
+            Args.penaltys = getPenaltys.GetPenaltys();
+            update(this, Args);
+
+        }
+
+        private void reductionB_Click(object sender, EventArgs e)
+        {
+            UpdateCommands updCommand = new UpdateCommands();
+
+            try
+            {
+                updCommand.UpdateGoals(Convert.ToInt32(numberOfR.Text), commadsSelector.Text);
+                updateViews();
+            }
+            catch
+            {
+                MessageBox.Show("введите число в поле на","Ошибка ввода!");
+            }
+            
         }
     }
 }

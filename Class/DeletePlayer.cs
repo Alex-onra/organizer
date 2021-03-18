@@ -13,5 +13,12 @@ namespace OrganizerB
                  dbCommand.ExecuteNonQuery();
                     connector.disposeConnection();
         }
+        public void DeleteByPenaltys(int max)
+        {
+            string delQuery = $"DELETE FROM Hockey Where Penaltys > {max}";
+            OleDbCommand dbCommand = new OleDbCommand(delQuery, connector.getConnection());
+            dbCommand.ExecuteNonQuery();
+            connector.disposeConnection();
+        }
     }
 }

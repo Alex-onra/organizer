@@ -62,6 +62,7 @@
     <Compile Include="Class\GetPenaltysClass.cs" />
     <Compile Include="Class\Models\BestPlayerRowModel.cs" />
     <Compile Include="Class\Models\HockeyRowModel.cs" />
+    <Compile Include="Class\Selection.cs" />
     <Compile Include="Class\StatisticEventArgs.cs" />
     <Compile Include="Class\StatisticGetter.cs" />
     <Compile Include="Class\UpdateCommands.cs" />

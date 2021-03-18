@@ -20,8 +20,8 @@ namespace OrganizerB
                 TransfersText.TextLength != 0 &&
                 PenaltysText.TextLength != 0)
             {
-                //try
-                //{
+                try
+                {
                     HockeyRowModel row = new HockeyRowModel();
                     row.surname = SurnameText.Text;
                     row.command = AddCommandNames.Text;
@@ -35,11 +35,11 @@ namespace OrganizerB
                         aboutComands.Register();
 
                     statistic.Get();
-                //}
-                //catch
-                //{
-                //    MessageBox.Show("Проверьте правильность ввода данных и повторите попытку", "Ошибка!");
-                //}
+                }
+                catch
+                {
+                    MessageBox.Show("Проверьте правильность ввода данных и повторите попытку", "Ошибка!");
+                }
 
             }
 
