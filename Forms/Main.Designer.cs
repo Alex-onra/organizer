@@ -44,6 +44,8 @@ namespace OrganizerB
             this.button2 = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.контактыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.задачиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CommandsView)).BeginInit();
@@ -62,6 +64,9 @@ namespace OrganizerB
             // 
             // органайзерToolStripMenuItem
             // 
+            this.органайзерToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.контактыToolStripMenuItem,
+            this.задачиToolStripMenuItem});
             this.органайзерToolStripMenuItem.Name = "органайзерToolStripMenuItem";
             this.органайзерToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.органайзерToolStripMenuItem.Text = "Органайзер";
@@ -188,6 +193,19 @@ namespace OrganizerB
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // контактыToolStripMenuItem
+            // 
+            this.контактыToolStripMenuItem.Name = "контактыToolStripMenuItem";
+            this.контактыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.контактыToolStripMenuItem.Text = "Контакты";
+            this.контактыToolStripMenuItem.Click += new System.EventHandler(this.контактыToolStripMenuItem_Click);
+            // 
+            // задачиToolStripMenuItem
+            // 
+            this.задачиToolStripMenuItem.Name = "задачиToolStripMenuItem";
+            this.задачиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.задачиToolStripMenuItem.Text = "Задачи";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,6 +244,8 @@ namespace OrganizerB
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ToolStripMenuItem контактыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem задачиToolStripMenuItem;
     }
 }
 

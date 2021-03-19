@@ -33,7 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
@@ -47,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Models\ContactsRow.cs" />
+    <Compile Include="Class\organizer\AddContact.cs" />
+    <Compile Include="Class\organizer\ContactsProcesses.cs" />
+    <Compile Include="Class\organizer\DeleteContact.cs" />
+    <Compile Include="Class\organizer\FindContacts.cs" />
+    <Compile Include="Class\organizer\GetAllContacts.cs" />
     <Compile Include="Forms\AboutComands.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +74,12 @@
     <Compile Include="Class\Models\StatisticEventArgs.cs" />
     <Compile Include="Class\Hockey\StatisticGetter.cs" />
     <Compile Include="Class\Hockey\UpdateCommands.cs" />
+    <Compile Include="Forms\ContactsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ContactsForm.Designer.cs">
+      <DependentUpon>ContactsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +96,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AboutComands.resx">
       <DependentUpon>AboutComands.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ContactsForm.resx">
+      <DependentUpon>ContactsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -116,8 +133,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Class\organizer\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using OrganizerB.Forms;
 
 namespace OrganizerB
 {
     public partial class Main : Form
     {
-        public Main()
-        {
+        public Main()=>
             InitializeComponent();
-        }
+        
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -81,9 +81,14 @@ namespace OrganizerB
             UpdateDataView(this, args);
         }
 
-        private void Main_Shown(object sender, EventArgs e)
+        private void Main_Shown(object sender, EventArgs e)=>
+           GetUpdate();
+        
+
+        private void контактыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GetUpdate();
+            ContactsForm contacts = new ContactsForm();
+            contacts.ShowDialog();
         }
     }
 }
