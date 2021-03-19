@@ -49,7 +49,10 @@ namespace OrganizerB.Forms
         private void DeleteButton_Click(object sender, EventArgs e)
         {
             if (ContactsView.SelectedRows.Count == 1)
-                contacts.deleteContact((string)ContactsView.SelectedRows[0].Cells[0].Value);
+            {
+                contacts.deleteContact((int)ContactsView.SelectedRows[0].Cells[0].Value);
+                ContactsForm_Shown(this, e);
+            }
             else 
                 MessageBox.Show("Выберите одну строку и повторите попытку", "Ошибка удаления");
         }

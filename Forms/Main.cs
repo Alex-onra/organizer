@@ -90,5 +90,11 @@ namespace OrganizerB
             ContactsForm contacts = new ContactsForm();
             contacts.ShowDialog();
         }
+
+        private void задачиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TasksForm tasks = new TasksForm();
+            tasks.ShowDialog();
+        }
     }
 }

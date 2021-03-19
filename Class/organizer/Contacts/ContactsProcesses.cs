@@ -34,10 +34,10 @@ namespace OrganizerB
             return find.FindByPhone(phone);
         }
 
-        public void deleteContact(string id)
+        public void deleteContact(int id)
         {
             ContactsRow contact = new ContactsRow();
-            contact.ID = Convert.ToInt32(id);
+            contact.ID = id;
             delete.Delete(contact);
         }
       

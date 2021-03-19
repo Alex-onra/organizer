@@ -50,11 +50,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Models\ContactsRow.cs" />
-    <Compile Include="Class\organizer\AddContact.cs" />
-    <Compile Include="Class\organizer\ContactsProcesses.cs" />
-    <Compile Include="Class\organizer\DeleteContact.cs" />
-    <Compile Include="Class\organizer\FindContacts.cs" />
-    <Compile Include="Class\organizer\GetAllContacts.cs" />
+    <Compile Include="Class\Models\TaskRow.cs" />
+    <Compile Include="Class\organizer\Contacts\AddContact.cs" />
+    <Compile Include="Class\organizer\Contacts\ContactsProcesses.cs" />
+    <Compile Include="Class\organizer\Contacts\DeleteContact.cs" />
+    <Compile Include="Class\organizer\Contacts\FindContacts.cs" />
+    <Compile Include="Class\organizer\Contacts\GetAllContacts.cs" />
+    <Compile Include="Class\organizer\Tasks\AddTask.cs" />
+    <Compile Include="Class\organizer\Tasks\CloseTask.cs" />
+    <Compile Include="Class\organizer\Tasks\EditTask.cs" />
+    <Compile Include="Class\organizer\Tasks\GetTasks.cs" />
+    <Compile Include="Class\organizer\Tasks\TaskProcess.cs" />
     <Compile Include="Forms\AboutComands.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,12 @@
     <Compile Include="Forms\AddPlayer.Designer.cs">
       <DependentUpon>AddPlayer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TasksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TasksForm.Designer.cs">
+      <DependentUpon>TasksForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AboutComands.resx">
@@ -105,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddPlayer.resx">
       <DependentUpon>AddPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TasksForm.resx">
+      <DependentUpon>TasksForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
